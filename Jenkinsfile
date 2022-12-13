@@ -12,7 +12,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'docker -v'
+                sh 'go version'
             }
         }
     }
