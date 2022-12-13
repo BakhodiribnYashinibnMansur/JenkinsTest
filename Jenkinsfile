@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker {dockerfile true}
+        docker { image 'golang:latest' }
     }
     stages {
         stage('Deploy') {
