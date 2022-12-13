@@ -1,11 +1,11 @@
 pipeline {
-    agent
+    agent {
+        docker { image 'golang:latest' }
+    }
     stages {
-        stage("Build") {
+        stage('Deploy') {
             steps {
-                cleanWs()
-                git branch: 'sprint-42', changelog: false, credentialsId: 'gitlab-credentials-suhrob', poll: false, url: 'https://gitlab.com/thinkland-frontend/sevimli-frontend-app.git'
-                    sh "docker compose up -d "
+                sh 'docker compose up -d '
             }
         }
     }
