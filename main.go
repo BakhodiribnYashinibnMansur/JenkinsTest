@@ -14,7 +14,7 @@ func main() {
 
 	router.GET("/", func(ctx *gin.Context) {
 
-		ctx.JSON(http.StatusOK, gin.H{"Message": "commit 2"})
+		ctx.JSON(http.StatusOK, gin.H{"Message": "commit 3"})
 
 	})
 
